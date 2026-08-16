@@ -699,10 +699,10 @@ section {
   color: var(--text-secondary);
   font-size: 0.85rem;
   line-height: 1.4;
-  margin-bottom: 1.25rem;
-  height: 38px;
+  margin-bottom: 0.5rem;
+  height: 54px;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
