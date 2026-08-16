@@ -97,20 +97,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 5. Products Slider Navigation Logic
+  // 5. Products Slider Navigation Logic (Page / Block Scroll)
   const prevBtn = document.getElementById('slider-prev');
   const nextBtn = document.getElementById('slider-next');
 
   if (productsGrid && prevBtn && nextBtn) {
-    // Scroll distance based on card width
     prevBtn.addEventListener('click', () => {
-      const cardWidth = productsGrid.querySelector('.product-card').offsetWidth + 24; // width + gap
-      productsGrid.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+      // Scroll by visible width of the grid container (multi-card scroll)
+      const scrollAmount = productsGrid.clientWidth;
+      productsGrid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     });
 
     nextBtn.addEventListener('click', () => {
-      const cardWidth = productsGrid.querySelector('.product-card').offsetWidth + 24; // width + gap
-      productsGrid.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      // Scroll by visible width of the grid container (multi-card scroll)
+      const scrollAmount = productsGrid.clientWidth;
+      productsGrid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     });
   }
 });
