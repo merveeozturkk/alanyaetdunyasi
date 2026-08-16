@@ -170,20 +170,27 @@
         <span class="section-subtitle">ZENGİN YELPAZEMİZ</span>
         <h2 class="section-title" id="products-title">Ürünlerimiz</h2>
       </div>
+      <!-- Filter Tabs -->
+      <div class="products-filter">
+        <button class="filter-btn active" data-filter="all">Tüm Ürünler</button>
+        <button class="filter-btn" data-filter="kirmizi">Kırmızı Et</button>
+        <button class="filter-btn" data-filter="beyaz">Beyaz Et</button>
+        <button class="filter-btn" data-filter="sarkuteri">Köfte & Şarküteri</button>
+      </div>
 
-
-
-      <!-- Products Grid -->
-      <div class="products-grid" id="products-grid">
-        <!-- Dana Antrikot -->
-        <div class="product-card" id="prod-antrikot">
+      <!-- Products Slider Container -->
+      <div class="products-slider-container">
+        <button class="slider-arrow prev-btn" id="slider-prev" aria-label="Önceki Ürünler"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="products-grid" id="products-grid">
+        <!-- 1. Dana Antrikot -->
+        <div class="product-card" data-category="kirmizi" id="prod-antrikot">
           <div class="product-img-wrapper">
             <img src="assets/dana_antrikot.jpg" alt="Dana Antrikot" class="product-img">
             <span class="product-tag">Popüler</span>
           </div>
           <div class="product-info">
             <h3 class="product-name">Dana Antrikot</h3>
-            <p class="product-desc">Doğal besi danalardan elde edilen, mükemmel mermersi dokusuyla lokum kıvamında antrikot.</p>
+            <p class="product-desc">Doğal besi danalardan elde edilen, lokum kıvamında taze antrikot.</p>
             <div class="product-footer">
               <span class="product-price">Günlük Fiyat</span>
               <a href="tel:+902425136569" class="order-btn-small">
@@ -193,15 +200,15 @@
           </div>
         </div>
 
-        <!-- Taze Dana Kıyma -->
-        <div class="product-card" id="prod-kiyma">
+        <!-- 2. Dana Kıyma -->
+        <div class="product-card" data-category="kirmizi" id="prod-kiyma">
           <div class="product-img-wrapper">
-            <img src="assets/taze_kiyma.png" alt="Taze Dana Kıyma" class="product-img">
+            <img src="assets/taze_kiyma.png" alt="Dana Kıyma" class="product-img">
             <span class="product-tag">Günlük Çekim</span>
           </div>
           <div class="product-info">
-            <h3 class="product-name">Taze Dana Kıyma</h3>
-            <p class="product-desc">Hijyenik koşullarda günlük olarak taze çekilen, az yağlı yerli besi dana kıyması.</p>
+            <h3 class="product-name">Dana Kıyma</h3>
+            <p class="product-desc">Hijyenik koşullarda günlük taze çekilen, az yağlı dana kıyması.</p>
             <div class="product-footer">
               <span class="product-price">Günlük Fiyat</span>
               <a href="tel:+902425136569" class="order-btn-small">
@@ -211,14 +218,14 @@
           </div>
         </div>
 
-        <!-- Kuzu Pirzola -->
-        <div class="product-card" id="prod-kuzupirzola">
+        <!-- 3. Kuzu Pirzola -->
+        <div class="product-card" data-category="kirmizi" id="prod-kuzupirzola">
           <div class="product-img-wrapper">
             <img src="assets/kuzu_pirzola.jpg" alt="Kuzu Pirzola" class="product-img">
           </div>
           <div class="product-info">
             <h3 class="product-name">Kuzu Pirzola</h3>
-            <p class="product-desc">Doğal meralarda yetişmiş süt kuzularından hazırlanan nefis kemikli kuzu pirzola.</p>
+            <p class="product-desc">Süt kuzularından hazırlanan, nefis kemikli kuzu pirzola.</p>
             <div class="product-footer">
               <span class="product-price">Günlük Fiyat</span>
               <a href="tel:+902425136569" class="order-btn-small">
@@ -228,15 +235,14 @@
           </div>
         </div>
 
-        <!-- Özel Kasap Köfte -->
-        <div class="product-card" id="prod-kasapkofte">
+        <!-- 4. Dana Kuşbaşı -->
+        <div class="product-card" data-category="kirmizi" id="prod-danakusbasi">
           <div class="product-img-wrapper">
-            <img src="assets/kasap_kofte.jpg" alt="Özel Kasap Köfte" class="product-img">
-            <span class="product-tag">Ev Yapımı</span>
+            <img src="assets/DANA-KUSBASI.webp" alt="Dana Kuşbaşı" class="product-img">
           </div>
           <div class="product-info">
-            <h3 class="product-name">Özel Kasap Köfte</h3>
-            <p class="product-desc">Geleneksel baharat karışımımız ve günlük çekim taze kıymayla yoğrulan kasap köfte.</p>
+            <h3 class="product-name">Dana Kuşbaşı</h3>
+            <p class="product-desc">Yemeklik ve kebaplık, sinirlerinden ayıklanmış taze dana kuşbaşı.</p>
             <div class="product-footer">
               <span class="product-price">Günlük Fiyat</span>
               <a href="tel:+902425136569" class="order-btn-small">
@@ -246,8 +252,95 @@
           </div>
         </div>
 
-        <!-- Tavuk Göğsü -->
-        <div class="product-card" id="prod-tavukgogsu">
+        <!-- 5. Dana Biftek -->
+        <div class="product-card" data-category="kirmizi" id="prod-danabiftek">
+          <div class="product-img-wrapper">
+            <img src="assets/dana-biftek-b6f7fb.jpg" alt="Dana Biftek" class="product-img">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Dana Biftek</h3>
+            <p class="product-desc">Izgaralık ve tava için özel dilimlenmiş, yumuşak dana biftek.</p>
+            <div class="product-footer">
+              <span class="product-price">Günlük Fiyat</span>
+              <a href="tel:+902425136569" class="order-btn-small">
+                Sipariş İçin Ara <i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Dana Kavurma -->
+        <div class="product-card" data-category="kirmizi" id="prod-danakavurma">
+          <div class="product-img-wrapper">
+            <img src="assets/dana-kavurmalik-et-65-407.jpg" alt="Dana Kavurma" class="product-img">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Dana Kavurma</h3>
+            <p class="product-desc">Geleneksel yöntemlerle hazırlanan, lokum kıvamında taze dana kavurma.</p>
+            <div class="product-footer">
+              <span class="product-price">Günlük Fiyat</span>
+              <a href="tel:+902425136569" class="order-btn-small">
+                Sipariş İçin Ara <i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Dana İncik (Ossobuco) -->
+        <div class="product-card" data-category="kirmizi" id="prod-danaincik">
+          <div class="product-img-wrapper">
+            <img src="assets/dana-osso-buco-5e815e.webp" alt="Dana İncik (Ossobuco)" class="product-img">
+            <span class="product-tag">İlikli</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Dana İncik (Ossobuco)</h3>
+            <p class="product-desc">Yemeklere eşsiz lezzet katan, ilikli ve taze dana incik dilimleri.</p>
+            <div class="product-footer">
+              <span class="product-price">Günlük Fiyat</span>
+              <a href="tel:+902425136569" class="order-btn-small">
+                Sipariş İçin Ara <i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Kuzu Kuşbaşı -->
+        <div class="product-card" data-category="kirmizi" id="prod-kuzukusbasi">
+          <div class="product-img-wrapper">
+            <img src="assets/kuzu-az-yagli-kusbasi-f9eb6a.webp" alt="Kuzu Kuşbaşı" class="product-img">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Kuzu Kuşbaşı</h3>
+            <p class="product-desc">Az yağlı süt kuzusundan hazırlanmış taze yemeklik kuzu kuşbaşı.</p>
+            <div class="product-footer">
+              <span class="product-price">Günlük Fiyat</span>
+              <a href="tel:+902425136569" class="order-btn-small">
+                Sipariş İçin Ara <i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. Dana Bonfile -->
+        <div class="product-card" data-category="kirmizi" id="prod-danabonfile">
+          <div class="product-img-wrapper">
+            <img src="assets/dana_bonfile.avif" alt="Dana Bonfile" class="product-img">
+            <span class="product-tag">Premium</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Dana Bonfile</h3>
+            <p class="product-desc">Yağsız, son derece yumuşak ve lokum kıvamında premium dana bonfile.</p>
+            <div class="product-footer">
+              <span class="product-price">Günlük Fiyat</span>
+              <a href="tel:+902425136569" class="order-btn-small">
+                Sipariş İçin Ara <i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. Tavuk Göğsü -->
+        <div class="product-card" data-category="beyaz" id="prod-tavukgogsu">
           <div class="product-img-wrapper">
             <img src="assets/tavuk_gogsu.jpg" alt="Tavuk Göğsü" class="product-img">
           </div>
@@ -263,15 +356,14 @@
           </div>
         </div>
 
-        <!-- Ev Yapımı Sucuk -->
-        <div class="product-card" id="prod-sucuk">
+        <!-- 11. Tavuk Kanat -->
+        <div class="product-card" data-category="beyaz" id="prod-tavukkanat">
           <div class="product-img-wrapper">
-            <img src="assets/kasap_sucuk.jpg" alt="Ev Yapımı Kasap Sucuk" class="product-img">
-            <span class="product-tag">Doğal</span>
+            <img src="assets/kuru-yolma-tavuk-kanat-700-gr-kandazla-8044a-.jpg" alt="Tavuk Kanat" class="product-img">
           </div>
           <div class="product-info">
-            <h3 class="product-name">Ev Yapımı Kasap Sucuk</h3>
-            <p class="product-desc">Kendi imalatımız olan, özel baharatlarla doldurulup doğal kurutulmuş kasap sucuğu.</p>
+            <h3 class="product-name">Tavuk Kanat</h3>
+            <p class="product-desc">Mangallık ve fırınlık, taze kuru yolma tavuk kanatları.</p>
             <div class="product-footer">
               <span class="product-price">Günlük Fiyat</span>
               <a href="tel:+902425136569" class="order-btn-small">
@@ -280,6 +372,129 @@
             </div>
           </div>
         </div>
+
+        <!-- 12. Tavuk Kelebek -->
+        <div class="product-card" data-category="beyaz" id="prod-tavukkelebek">
+          <div class="product-img-wrapper">
+            <img src="assets/tavuk-kelebek-kemikli-mi-822893ca-a15b-45ca-b876-223141cc06b8.avif" alt="Tavuk Kelebek" class="product-img">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Tavuk Kelebek</h3>
+            <p class="product-desc">Soslamaya ve ızgaraya uygun, taze kemikli tavuk kelebek kesim.</p>
+            <div class="product-footer">
+              <span class="product-price">Günlük Fiyat</span>
+              <a href="tel:+902425136569" class="order-btn-small">
+                Sipariş İçin Ara <i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 13. Tavuk Pirzola -->
+        <div class="product-card" data-category="beyaz" id="prod-tavukpirzola">
+          <div class="product-img-wrapper">
+            <img src="assets/tavuk-pirzola-5eab-1.webp" alt="Tavuk Pirzola" class="product-img">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Tavuk Pirzola</h3>
+            <p class="product-desc">Izgaralık taze tavuk pirzola, sulu ve lezzetli kemiksiz et.</p>
+            <div class="product-footer">
+              <span class="product-price">Günlük Fiyat</span>
+              <a href="tel:+902425136569" class="order-btn-small">
+                Sipariş İçin Ara <i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 14. Tavuk Baget -->
+        <div class="product-card" data-category="beyaz" id="prod-tavukbaget">
+          <div class="product-img-wrapper">
+            <img src="assets/tavuk_baget.jpg" alt="Tavuk Baget" class="product-img">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Tavuk Baget</h3>
+            <p class="product-desc">Fırınlık ve haşlamalık, derisi üzerinde taze tavuk bagetler.</p>
+            <div class="product-footer">
+              <span class="product-price">Günlük Fiyat</span>
+              <a href="tel:+902425136569" class="order-btn-small">
+                Sipariş İçin Ara <i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 15. Bütün Tavuk -->
+        <div class="product-card" data-category="beyaz" id="prod-butuntavuk">
+          <div class="product-img-wrapper">
+            <img src="assets/butun_tavuk.jpeg" alt="Bütün Tavuk" class="product-img">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Bütün Tavuk</h3>
+            <p class="product-desc">Fırınlık ve haşlamalık, temizlenmiş taze bütün çiftlik tavuğu.</p>
+            <div class="product-footer">
+              <span class="product-price">Günlük Fiyat</span>
+              <a href="tel:+902425136569" class="order-btn-small">
+                Sipariş İçin Ara <i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 16. Tavuk Kalçalı But -->
+        <div class="product-card" data-category="beyaz" id="prod-kalcalibut">
+          <div class="product-img-wrapper">
+            <img src="assets/kalcali_but.jpg" alt="Tavuk Kalçalı But" class="product-img">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Tavuk Kalçalı But</h3>
+            <p class="product-desc">Sulu ve lezzetli taze tavuk kalçalı but dilimleri.</p>
+            <div class="product-footer">
+              <span class="product-price">Günlük Fiyat</span>
+              <a href="tel:+902425136569" class="order-btn-small">
+                Sipariş İçin Ara <i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 17. Kasap Köfte -->
+        <div class="product-card" data-category="sarkuteri" id="prod-kasapkofte">
+          <div class="product-img-wrapper">
+            <img src="assets/kasap_kofte.jpg" alt="Kasap Köfte" class="product-img">
+            <span class="product-tag">Ev Yapımı</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Kasap Köfte</h3>
+            <p class="product-desc">Geleneksel tarifimizle günlük yoğrulan ev yapımı kasap köfte.</p>
+            <div class="product-footer">
+              <span class="product-price">Günlük Fiyat</span>
+              <a href="tel:+902425136569" class="order-btn-small">
+                Sipariş İçin Ara <i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 18. Kasap Sucuk -->
+        <div class="product-card" data-category="sarkuteri" id="prod-sucuk">
+          <div class="product-img-wrapper">
+            <img src="assets/kasap_sucuk.jpg" alt="Kasap Sucuk" class="product-img">
+            <span class="product-tag">Doğal</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Kasap Sucuk</h3>
+            <p class="product-desc">Kendi imalatımız olan, özel baharatlı doğal kurutulmuş kasap sucuğu.</p>
+            <div class="product-footer">
+              <span class="product-price">Günlük Fiyat</span>
+              <a href="tel:+902425136569" class="order-btn-small">
+                Sipariş İçin Ara <i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        </div>
+        <button class="slider-arrow next-btn" id="slider-next" aria-label="Sonraki Ürünler"><i class="fa-solid fa-chevron-right"></i></button>
       </div>
     </div>
   </section>
@@ -393,16 +608,12 @@
           <div class="working-hours">
             <h4><i class="fa-regular fa-clock" style="margin-right: 10px;"></i> Çalışma Saatleri</h4>
             <div class="hours-row">
-              <span>Pzt - Perş & Cumartesi</span>
+              <span>Pazartesi - Cumartesi</span>
               <span>08:00 - 20:30</span>
-            </div>
-            <div class="hours-row">
-              <span>Cuma</span>
-              <span>08:30 - 20:30</span>
             </div>
             <div class="hours-row weekend">
               <span>Pazar</span>
-              <span>08:30 - 20:00</span>
+              <span>08:00 - 20:00</span>
             </div>
           </div>
         </div>
@@ -431,9 +642,7 @@
           </a>
           <p class="footer-desc">En taze yerli besi et çeşitleri, hijyenik kesim ve usta kasap kalitesi ile Alanya'da sofralarınıza lezzet taşıyoruz.</p>
           <div class="social-links">
-            <a href="https://facebook.com" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook Sayfamız"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://instagram.com" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram Sayfamız"><i class="fab fa-instagram"></i></a>
-            <a href="https://twitter.com" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Twitter Sayfamız"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/alanya_et_dunyasi/" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram Sayfamız"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
 

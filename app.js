@@ -58,9 +58,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Products Filter Logic
+  // 4. Products Filter & Slider Scroll Reset Logic
   const filterButtons = document.querySelectorAll('.filter-btn');
   const productCards = document.querySelectorAll('.product-card');
+  const productsGrid = document.getElementById('products-grid');
 
   filterButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -70,6 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
       button.classList.add('active');
 
       const filterValue = button.getAttribute('data-filter');
+
+      // Scroll container back to start when filter changes
+      if (productsGrid) {
+        productsGrid.scrollTo({ left: 0, behavior: 'smooth' });
+      }
 
       productCards.forEach(card => {
         card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
@@ -90,4 +96,21 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  // 5. Products Slider Navigation Logic
+  const prevBtn = document.getElementById('slider-prev');
+  const nextBtn = document.getElementById('slider-next');
+
+  if (productsGrid && prevBtn && nextBtn) {
+    // Scroll distance based on card width
+    prevBtn.addEventListener('click', () => {
+      const cardWidth = productsGrid.querySelector('.product-card').offsetWidth + 24; // width + gap
+      productsGrid.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+      const cardWidth = productsGrid.querySelector('.product-card').offsetWidth + 24; // width + gap
+      productsGrid.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    });
+  }
 });
