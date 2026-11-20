@@ -390,9 +390,6 @@ document.addEventListener('DOMContentLoaded', () => {
         msg += `• ${item.qty} Adet - ${item.name} (${item.weight})\n`;
       });
 
-      msg += `----------------------------------\n`;
-      msg += `⚠️ *Bilgilendirme:* Sipariş üzerine taze tartım yapılarak hazırlanmaktadır.`;
-
       // Redirect to WhatsApp
       const whatsappUrl = `https://api.whatsapp.com/send?phone=${WHATSAPP_PHONE}&text=${encodeURIComponent(msg)}`;
       window.open(whatsappUrl, '_blank');
