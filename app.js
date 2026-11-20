@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
         
         if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-          card.style.display = 'block';
+          card.style.display = 'flex';
           setTimeout(() => {
             card.style.opacity = '1';
             card.style.transform = 'scale(1)';

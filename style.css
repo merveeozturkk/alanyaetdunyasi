@@ -1163,8 +1163,8 @@ footer {
   }
   
   .hero-image-box {
-    margin-top: 3rem;
-    height: 380px;
+    margin-top: 2rem;
+    height: 320px;
   }
   
   .hero-floating-badge {
@@ -1185,16 +1185,16 @@ footer {
   }
   
   .about-img-main, .specials-image img {
-    height: 380px;
+    height: 320px;
   }
   
   .contact-info-container {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
   
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
   }
   
   .nav-menu {
@@ -1205,16 +1205,12 @@ footer {
     display: block;
   }
 
-  .product-card {
-    flex: 0 0 calc(50% - 0.75rem);
-  }
-
   .slider-arrow {
     display: none;
   }
 }
 
-/* Mobile Nav Styles */
+/* Mobile Nav Dropdown */
 .nav-menu.mobile-active {
   display: flex;
   flex-direction: column;
@@ -1224,46 +1220,218 @@ footer {
   width: 100%;
   background-color: var(--primary-bg);
   border-bottom: 1px solid var(--border-color-light);
-  padding: 2rem;
-  gap: 1.5rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  gap: 1.25rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
+/* Tablet & Mobile: 768px Altı Akıllı 2 Sütunlu Grid */
+@media (max-width: 768px) {
+  .products-slider-container {
+    display: block;
+    width: 100%;
+  }
+
+  .products-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.85rem !important;
+    overflow-x: visible !important;
+    padding: 0.5rem 0 !important;
+    width: 100% !important;
+  }
+
+  .product-card {
+    flex: none !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    border-radius: 16px !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid var(--border-color-light) !important;
+  }
+
+  .product-img-wrapper {
+    height: 130px !important;
+  }
+
+  .product-info {
+    padding: 0.75rem 0.65rem !important;
+  }
+
+  .product-name {
+    font-size: 0.95rem !important;
+    margin-bottom: 0.25rem !important;
+    line-height: 1.25 !important;
+    height: 38px !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+
+  .product-desc {
+    display: none !important; /* Mobilde kartı şişirmez, sade tutar */
+  }
+
+  .product-action {
+    flex-direction: column !important;
+    gap: 0.4rem !important;
+    padding-top: 0.5rem !important;
+    margin-top: auto !important;
+  }
+
+  .weight-selector-wrapper, 
+  .add-to-cart-btn {
+    width: 100% !important;
+  }
+
+  .weight-select {
+    padding: 0.45rem 0.5rem !important;
+    font-size: 0.78rem !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+  }
+
+  .add-to-cart-btn {
+    padding: 0.5rem 0.5rem !important;
+    font-size: 0.82rem !important;
+    border-radius: 8px !important;
+    justify-content: center !important;
+  }
+
+  .products-filter {
+    gap: 0.5rem !important;
+    margin-bottom: 1.5rem !important;
+    justify-content: center !important;
+  }
+
+  .filter-btn {
+    padding: 0.45rem 1rem !important;
+    font-size: 0.82rem !important;
+  }
+}
+
+/* Telefonlar: 576px ve Altı */
 @media (max-width: 576px) {
   html {
     font-size: 14px;
   }
-  
-  .section-title {
-    font-size: 2.2rem;
-  }
-  
-  .hero-title {
-    font-size: 2.6rem;
-  }
-  
-  .btn {
-    width: 100%;
-  }
-  
-  .whatsapp-float {
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    font-size: 26px;
-  }
-  
-  .hero-floating-badge {
-    display: none;
-  }
-  
-  .features-grid {
-    grid-template-columns: 1fr;
+
+  /* Header Bar */
+  .nav-container {
+    padding: 0.6rem 0.85rem !important;
   }
 
-  .product-card {
-    flex: 0 0 85%;
+  .logo-img {
+    height: 38px !important;
+  }
+
+  .logo-text {
+    font-size: 1.05rem !important;
+  }
+
+  .nav-actions {
+    gap: 0.4rem !important;
+  }
+
+  #header-call-btn {
+    padding: 0.45rem 0.75rem !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 0 !important;
+  }
+
+  .header-cart-btn {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 0.95rem !important;
+  }
+
+  /* Hero Section */
+  .hero {
+    min-height: auto !important;
+    padding-top: 80px !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .hero-container {
+    padding: 1.5rem 0.85rem !important;
+    gap: 1.5rem !important;
+  }
+
+  .hero-title {
+    font-size: 2.1rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .hero-desc {
+    font-size: 0.88rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .hero-image-box {
+    height: 240px !important;
+    margin-top: 1rem !important;
+  }
+
+  .hero-floating-badge {
+    display: none !important;
+  }
+
+  .section-title {
+    font-size: 1.85rem !important;
+  }
+
+  .section-subtitle {
+    font-size: 0.75rem !important;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* Floating Cart Button */
+  .floating-cart-btn {
+    bottom: 16px !important;
+    right: 16px !important;
+    padding: 0.65rem 1.1rem !important;
+    font-size: 0.85rem !important;
+    border-radius: 50px !important;
+    box-shadow: 0 8px 25px rgba(198, 40, 40, 0.4) !important;
+  }
+
+  /* Cart Drawer Fullscreen Mobile */
+  .cart-drawer {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .cart-header {
+    padding: 1rem !important;
+  }
+
+  .cart-body {
+    padding: 0.85rem !important;
+  }
+
+  .cart-footer {
+    padding: 0.85rem 1rem !important;
+  }
+
+  .btn-whatsapp-order {
+    padding: 0.85rem 1rem !important;
+    font-size: 0.95rem !important;
+  }
+
+  .form-row {
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+
+  .toast-container {
+    bottom: 75px !important;
+    right: 12px !important;
+    left: 12px !important;
   }
 }
 
